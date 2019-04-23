@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>timer</title>
+    <meta name="description" content="a timer app" />
+
+    <link rel="icon" type="image/png" href="timer.png" />
+    <link rel="stylesheet" type="text/css" href="timer.css">
+  </head>
+  <body>
+    <audio id="sound1" src="project1.wav" autoplay="false" loop="true"></audio>
+    <div id="rootdiv">
+      <div class="timer" id="timer0" >
+        
+        <div class="timer-row advanced-pan">
+            <input  id='name' class='timer-name' placeholder="name"/>
+          <label>
+            chrono
+            <input type="checkbox" class='chrono' name="chrono"/>
+          </label>
+        </div>
+        <div class="timer-row" >
+          <input   class="time-input" min="0"    placeholder="00:00:00" />
+        </div>
+        <div class="timer-row">
+          <button class="green btnstart">start</button>
+          <button class="green btnpause">pause</button>
+          <button class="green btnadd">add</button>
+          <button class="red btnclose">close</button>
+        </div>
+
+        <div class="progress" draggable="true" ondragstart="drag(event)" ondragend="dragend(event)">
+          <div class="bar"></div>
+        </div>
+  
+      </div>
+    </div>
+    <script src="timer.js"></script>
+
+  </body>
+</html>
